@@ -5,14 +5,10 @@ multi-stage capture/processing pipelines, ball and player detection, and
 (planned) a virtual offside line. Inspired by the kind of officiating
 technology used in modern football (goal-line and offside systems).
 
-> Educational prototype. Not a certified or production system.
 
 ## Status
 
 - [x] Phase 1: threaded capture -> process -> output pipeline with timestamps, back-pressure and basic latency/throughput stats
-- [ ] Phase 2: pitch calibration (homography) + 2D virtual offside line
-- [ ] Phase 2b: ball tracking with a Kalman filter
-- [ ] Phase 3: CUDA / NVDEC / nvJPEG stage, CPU vs GPU benchmarks
 
 ## Build
 
@@ -40,6 +36,3 @@ capture thread --> BoundedQueue<Frame> --> process thread (Detector) --> output
 - `Detector` is an interface, so the placeholder `MotionDetector` can be swapped for a TensorRT/CUDA detector.
 - The bounded queue applies back-pressure instead of growing memory.
 
-## Benchmarks
-
-_To be filled in with hardware, resolution, FPS and latency numbers._
