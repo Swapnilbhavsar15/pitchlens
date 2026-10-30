@@ -5,10 +5,10 @@ multi-stage capture/processing pipelines, ball and player detection, and
 (planned) a virtual offside line. Inspired by the kind of officiating
 technology used in modern football (goal-line and offside systems).
 
+![Demo](docs/out.gif)
 
-## Status
-
-- [x] Phase 1: threaded capture -> process -> output pipeline with timestamps, back-pressure and basic latency/throughput stats
+## Working
+- threaded capture -> process -> output pipeline with timestamps, back-pressure and basic latency/throughput stats
 
 ## Build
 
